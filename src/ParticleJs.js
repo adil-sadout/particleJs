@@ -1,5 +1,5 @@
 import Particles from "react-tsparticles";
-import ParticleConfig from "./ParticleConfig" 
+import {configFile}  from "./ParticleConfig" 
 function ParticleJs() {
 
     
@@ -7,7 +7,7 @@ function ParticleJs() {
   return (
     <Particles
         id="tsparticles"
-        options={ParticleConfig}>
+        options={configFile}>
     </Particles>
   )
 }
