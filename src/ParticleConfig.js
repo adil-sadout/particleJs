@@ -15,34 +15,42 @@ const configFile = {
         onHover: {
         enable: true,
         mode: "grab",
-        parallax: { enable: true, force: 1, smooth: 500 }
+        parallax: { enable: true, force: 1, smooth: 20000 }
         },
         resize: true,
       },
       modes: {
-        bubble: {
-          distance: 400,
-          duration: 2,
-          opacity: 0.8,
-          size: 40,
-        },
+        
         push: {
           quantity: 4,
         },
+        
+        light:{},
         repulse: {
-          distance: 200,
+          distance: 50,
           duration: 0.4,
         },
       },
     },
     particles: {
       color: {
-        value: "#ffffff",
+        value: "#03dbfc",
+        animation: {
+          enable: true,
+          speed: 10,
+          sync: true
+        }
+      },
+      background: {
+        color: {
+          value: "#ffffff",
+        },
+        
       },
       links: {
         color: "#ffffff",
         distance: 100,
-        enable: true,
+        enable: false,
         opacity: 0.5,
         width: 1,
       },
@@ -53,32 +61,51 @@ const configFile = {
         direction: "none",
         enable: true,
         outMode: "bounce",
-        random: false,
-        speed: 2,
-        straight: true,
+        random: true,
+        speed: 0.1,
+        straight: false,
       },
       number: {
         density: {
           enable: true,
           area: 500,
         },
-        value: 80,
+        value: 30,
       },
       opacity: {
         value: 0.5,
       },
       shape: {
-        type: "triangle",
-      },
+        type: "star"
+        ,
+        image:{
+          src:"./assets/star.svg",
+          replaceColor :true
+          
+        },
+        character: {
+            value: "rocket is gay", // the text to use as particles, any string is valid, for escaping unicode char use the `\uXXXX` syntax
+            font: "Verdana", // the font to use to draw the text. If the font needs an external css or javascript like FontAwesome you should include all the necessary files on your own
+            style: "",
+            weight: "bold" // the css weight property, some fonts like font awesome have a specified weight, check the documentation if needed
+          }
+
+      }
+      ,
       size: {
+        value: 15,
         random: true,
-        value: 5,
+        animation: {
+        enable: true,
+        speed: 2,
+        minimumValue: 10,
+        sync: false
+      }
       },
     },
     detectRetina: true,
     
   }
-
 
 
 
@@ -134,7 +161,7 @@ const configFile = {
           parallax: {
             enable: false,
             force: 1,
-            smooth: 10
+            smooth: 1000
           }
         },
         resize: true
@@ -145,11 +172,11 @@ const configFile = {
           duration: 0.4,
           easing: "ease-out-quad",
           factor: 1,
-          maxSpeed: 50,
-          speed: 0
+          maxSpeed: 1,
+          speed: 1
         },
         bounce: {
-          distance: 200
+          enable:false
         },
         bubble: {
           distance: 40,
@@ -205,7 +232,7 @@ const configFile = {
           duration: 0.4,
           factor: 100,
           speed: 1,
-          maxSpeed: 5,
+          maxSpeed: 1,
           easing: "ease-out-quad"
         },
         slow: {

@@ -9,6 +9,7 @@ function ParticleJs() {
         id="tsparticles"
         options={configFile}>
     </Particles>
+    
   )
 }
 
