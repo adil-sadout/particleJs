@@ -39,7 +39,8 @@ const configFile = {
           enable: true,
           speed: 10,
           sync: true
-        }
+        },
+        
       },
       links: {
         color: "#ffffff",
@@ -70,11 +71,12 @@ const configFile = {
         value: 0.5,
       },
       shape: {
-        type: "star"
+        type: "polygon"
         ,
         image:{
           src:"./assets/star.svg",
-          replaceColor :true
+          replaceColor :true,
+          fill:true
           
         },
         character: {
@@ -82,7 +84,11 @@ const configFile = {
             font: "Verdana", // the font to use to draw the text. If the font needs an external css or javascript like FontAwesome you should include all the necessary files on your own
             style: "",
             weight: "bold" // the css weight property, some fonts like font awesome have a specified weight, check the documentation if needed
-          }
+        },
+        polygon:{
+          sides:4
+        }
+          
 
       }
       ,
@@ -97,6 +103,7 @@ const configFile = {
       }
       },
     },
+    
     detectRetina: true,
     
   }
@@ -106,6 +113,17 @@ const configFile = {
 
 
 
+
+ 
+
+
+
+
+
+
+
+
+  
 
 
 
